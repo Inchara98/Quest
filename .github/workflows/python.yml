@@ -20,4 +20,6 @@ jobs:
         python -m pip install --upgrade pip
 
     - name: execute py script # run main.py
-      run: python ./Test_cases/test_demo.py
+      run: |
+             python ./Test_cases/test_demo.py
+             python ./Test_cases/test_demo2.py
