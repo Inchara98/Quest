@@ -21,7 +21,7 @@ jobs:
         pip install pytest
         pip install selenium
         pip install openpyxl
-        pip install webdriver
+
 
     - name: execute py script # run main.py
       run: |
