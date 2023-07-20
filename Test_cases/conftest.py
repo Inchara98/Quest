@@ -1,5 +1,3 @@
-
-
 from selenium import webdriver
 import pytest
 from selenium.webdriver.chrome.options import Options
@@ -14,18 +12,20 @@ def setup(browser):
     options = webdriver.ChromeOptions()
     prefs = {'download.default_directory': ReadConfig.get_download_dir()}
     options.add_experimental_option('prefs', prefs)
-    options.add_argument("--window-size=3860,2160")
-    options.add_argument('--headless')
-    options.add_argument('--no-sandbox')
-    options.add_argument('--disable-gpu')
+    # options.add_argument("--window-size=3860,2160")
+    chromeoptions.add_argument('--headless')
+    chromeoptions.add_argument('--no-sandbox')
+    chromeoptions.add_argument('--disable-gpu')
+    chromeoptions.add_argument('--disable-dev-shm-usage')
     chromeoptions.add_experimental_option("prefs",
-                                          {
-                                              "download.default_directory": "/home/inchara/PycharmProjects/Quest"
-                                                                            "/Downloads"})
+                                    {
+                                        "download.default_directory": "/home/inchara/PycharmProjects/Quest"
+                                                                      "/Downloads"})
     if browser == 'chrome':
-        service = Service(executable_path="driver/chromedriver",
-                          chrome_options=chromeoptions)
-        driver = webdriver.Chrome(service=service)
+        # service = Service(executable_path="driver/chromedriver",
+        #                   chrome_options=chromeoptions)
+        # driver = webdriver.Chrome(service=service)
+        driver = webdriver.Chrome(options=chromeoptions)
         print("Launching chrome browser.......")
     elif browser == 'firefox':
         service = Service(executable_path="driver/geckodriver")

@@ -1,9 +1,17 @@
-import openpyxl
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 
-book = openpyxl.load_workbook("/home/inchara/Documents/cred_details.xlsx")
-sheet = book.active
-cell = sheet.cell(row=2, column=1)
-print(cell.value)
-for i in range(1, sheet.max_row+1):
-    print(sheet.cell(row=i, column=1).value)
+# Configure Chrome options to run headless
+chrome_options = Options()
+chrome_options.add_argument("--headless")
+
+# Initialize the WebDriver with the configured options
+driver = webdriver.Chrome(options=chrome_options)
+
+# Perform your tests here...
+driver.get("https://example.com")
+print(driver.title)
+
+# Close the WebDriver
+driver.quit()
 
