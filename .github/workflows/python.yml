@@ -21,7 +21,8 @@ jobs:
         pip install pytest
         pip install selenium
         pip install openpyxl
+        pip install webdriver
 
     - name: execute py script # run main.py
       run: |
-             pytest Test_cases/Test_demo.py --browser chrome
+             pytest ./Test_cases/Test_demo.py --browser chrome
