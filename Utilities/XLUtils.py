@@ -4,13 +4,13 @@ import openpyxl
 def getRowCount(file, sheetName):
     workbook = openpyxl.load_workbook(file)
     sheet = workbook[sheetName]
-    return (sheet.max_row)
+    return sheet.max_row
 
 
 def getColumnCount(file, sheetName):
     workbook = openpyxl.load_workbook(file)
     sheet = workbook[sheetName]
-    return (sheet.max_column)
+    return sheet.max_column
 
 
 def readData(file, sheetName, rownum, columnno):
@@ -24,6 +24,3 @@ def writeData(file, sheetName, rownum, columnno, data):
     sheet = workbook[sheetName]
     sheet.cell(row=rownum, column=columnno).value = data
     workbook.save(file)
-
-
-    

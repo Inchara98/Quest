@@ -28,7 +28,7 @@ class ReadConfig:
 
     @staticmethod
     def get_application_url():
-        url = config.get('config', 'url')
+        url = config.get('common_info', 'baseUrl')
         return url
 
     @staticmethod
@@ -76,3 +76,16 @@ class ReadConfig:
         cwd = os.path.dirname(__file__)
         download_path = os.path.join(cwd, 'Downloads')
         return download_path
+
+    @staticmethod
+    def get_ss_path():
+        cwd = os.path.dirname(__file__)
+        ss_path = os.path.join(cwd, '../Screenshots/')
+        return ss_path
+
+    @staticmethod
+    def get_logs_directory():
+        current_directory = os.path.dirname(__file__)
+        current_directory = current_directory.replace("Utilities", "")
+        logs_directory = os.path.join(current_directory, 'Logs')
+        return logs_directory
