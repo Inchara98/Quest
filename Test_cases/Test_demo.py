@@ -9,7 +9,7 @@ from Utilities.readProperties import ReadConfig
 class Testlogin:
     loginpage = None
 
-    print("********"+ReadConfig.get_logs_directory())
+    print("*********8**"+ReadConfig.get_logs_directory())
     # logger = CustomLogger.setup_logger('Login', ReadConfig.get_logs_directory() + "/Test_login.log",
     #                                    level=logging.DEBUG)
 
