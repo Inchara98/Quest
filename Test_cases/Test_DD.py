@@ -14,14 +14,14 @@ class Testlogin:
     logger = CustomLogger.setup_logger('Login', ReadConfig.get_logs_directory() + "/Test_login.log",
                                        level=logging.DEBUG)
 
-    book = openpyxl.load_workbook("/home/inchara/Documents/cred_details.xlsx")
-    sheet = book.active
-    username = sheet.cell(row=2, column=1)
-    password1 = sheet.cell(row=2, column=2)
-    user = username.value
-    print(user)
-    password = password1.value
-    print(password)
+    # book = openpyxl.load_workbook("/home/inchara/Documents/cred_details.xlsx")
+    # sheet = book.active
+    # username = sheet.cell(row=2, column=1)
+    # password1 = sheet.cell(row=2, column=2)
+    # user = username.value
+    # print(user)
+    # password = password1.value
+    # print(password)
 
     # def test_login_page_tittle(self, setup):
     #     self.logger.info("***********************Test_001_Login*****************************")
