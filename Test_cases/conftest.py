@@ -23,12 +23,12 @@ def setup(browser):
                                               "download.default_directory": "/home/inchara/PycharmProjects/Quest"
                                                                             "/Downloads"})
     if browser == 'chrome':
-        service = Service(executable_path="/home/inchara/PycharmProjects/Quest/driver/chromedriver",
+        service = Service(executable_path="driver/chromedriver",
                           chrome_options=chromeoptions)
         driver = webdriver.Chrome(service=service)
         print("Launching chrome browser.......")
     elif browser == 'firefox':
-        service = Service(executable_path="/home/inchara/PycharmProjects/Quest/driver/geckodriver")
+        service = Service(executable_path="driver/geckodriver")
         driver = webdriver.Firefox(service=service)
         print("Launching firefox browser.......")
     return driver

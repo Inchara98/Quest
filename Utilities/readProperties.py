@@ -14,8 +14,7 @@ class ReadConfig:
     def get_chrome_driver_directory():
         current_directory = os.path.dirname(__file__)
         current_directory = current_directory.replace("Utilities", "")
-        chrome_directory_path = os.path.join(current_directory, '/home/inchara/PycharmProjects/Quest/driver'
-                                                                '/chromedriver')
+        chrome_directory_path = os.path.join(current_directory, 'driver/chromedriver')
         return chrome_directory_path
 
     @staticmethod
