@@ -23,17 +23,17 @@ class Testlogin:
     password = password1.value
     print(password)
 
-    def test_login_page_tittle(self, setup):
-        self.logger.info("***********************Test_001_Login*****************************")
-        self.logger.info("********************test_login_page_tittle started*********************")
-        self.driver = setup
-        self.loginpage = Login(self.driver)
-        self.loginpage.open_application()
-        time.sleep(5)
-        self.driver.find_element(By.NAME, "username").send_keys(self.user)
-        self.driver.find_element(By.NAME, "password").send_keys(self.password)
-        self.driver.find_element(By.XPATH, "//button[@type='submit']").click()
-        time.sleep(4)
+    # def test_login_page_tittle(self, setup):
+    #     self.logger.info("***********************Test_001_Login*****************************")
+    #     self.logger.info("********************test_login_page_tittle started*********************")
+    #     self.driver = setup
+    #     self.loginpage = Login(self.driver)
+    #     self.loginpage.open_application()
+    #     time.sleep(5)
+    #     self.driver.find_element(By.NAME, "username").send_keys(self.user)
+    #     self.driver.find_element(By.NAME, "password").send_keys(self.password)
+    #     self.driver.find_element(By.XPATH, "//button[@type='submit']").click()
+    #     time.sleep(4)
 
     def test_login3_page_tittle(self, setup):
         self.logger.info("***********************Test_001_Login*****************************")
