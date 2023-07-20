@@ -5,7 +5,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome import webdriver, options
 
 config = configparser.RawConfigParser()
-config.read("/home/inchara/PycharmProjects/Quest/Configurations/config.ini")
+config.read("Configurations/config.ini")
 
 
 class ReadConfig:
