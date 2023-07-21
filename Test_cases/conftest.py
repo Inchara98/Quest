@@ -18,9 +18,9 @@ def setup(browser):
     chromeoptions.add_argument('--disable-gpu')
     chromeoptions.add_argument('--disable-dev-shm-usage')
     chromeoptions.add_experimental_option("prefs",
-                                    {
-                                        "download.default_directory": "/home/inchara/PycharmProjects/Quest"
-                                                                      "/Downloads"})
+                                          {
+                                              "download.default_directory": "/home/inchara/PycharmProjects/Quest"
+                                                                            "/Downloads"})
     if browser == 'chrome':
         # service = Service(executable_path="driver/chromedriver",
         #                   chrome_options=chromeoptions)
