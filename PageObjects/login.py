@@ -15,7 +15,7 @@ class Login(Base):
     filename = '/home/inchara/PycharmProjects/Quest/TestData/credentials.csv'
     dropdown = (By.CLASS_NAME, "oxd-userdropdown")
     logout = (By.XPATH, "//*[@id='app']/div[1]/div[1]/header/div[1]/div[2]/ul/li/ul/li[4]")
-    path = "/home/inchara/PycharmProjects/Quest/TestData/cred_details1.xlsx"
+    path = "TestData/cred_details1.xlsx"
     logger = CustomLogger.setup_logger('Login', ReadConfig.get_logs_directory() + "/Test_login.log",
                                        level=logging.DEBUG)
 
