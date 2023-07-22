@@ -68,3 +68,4 @@ jobs:
 #          body: "This is the email content."
 #          from: "inchara.gowda@tibilsolutions.com"
 #          to: "vinay.aj1997@gmail.com"
+#          attachments: ./Reports/report.html

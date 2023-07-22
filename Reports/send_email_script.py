@@ -20,7 +20,7 @@ def send_email(username, password, recipient_email):
     msg.attach(MIMEText(body, 'plain'))
 
     # Attach the test report file
-    with open('report.html', 'rb') as f:
+    with open('./Reports/report.html', 'rb') as f:
         attach = MIMEApplication(f.read(), _subtype="html")
         attach.add_header('Content-Disposition', 'attachment', filename=str("report.html"))
         msg.attach(attach)
