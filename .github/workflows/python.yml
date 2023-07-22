@@ -1,4 +1,4 @@
-name:  run main.py
+name:  selenium Test.py
 on:
   push:
     branches:
@@ -26,7 +26,7 @@ jobs:
         pip install pytest-html
 
     
-
+  
     
 
     - name: execute py script # run main.py
@@ -36,7 +36,9 @@ jobs:
 #    - name: execute py script # run main.py
 #      run: |
 #             python ./Test_cases/test.py
-             
+
+    - name: list files
+      run: ls
 
     - name: Send Email Report
       uses: actions/upload-artifact@v2
