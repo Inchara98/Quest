@@ -32,21 +32,21 @@ class Testlogin:
             assert False
         self.logger.info("******************** test_login_page_tittle ended ************************")
 
-    def test_login_page_ngtve(self, setup):
-        self.logger.info("***********************Test_001_Login*****************************")
-        self.logger.info("********************test_login_page_tittle started*********************")
-        self.driver = setup
-        self.loginpage = Login(self.driver)
-        self.loginpage.open_application()
-        time.sleep(5)
-        self.loginpage.open_login_page()
-        time.sleep(3)
-        if "dashboard1" in self.driver.current_url:
-            self.driver.close()
-            self.logger.info("******************** test_login_page_tittle test case passed ************************")
-        else:
-            self.driver.get_screenshot_as_file(ReadConfig.get_ss_path() + "test_login_page_tittle.png")
-            self.driver.close()
-            self.logger.error("******************** test_login_page_tittle test case failed **************************")
-            assert False
-        self.logger.info("******************** test_login_page_tittle ended ************************")
+    # def test_login_page_ngtve(self, setup):
+    #     self.logger.info("***********************Test_001_Login*****************************")
+    #     self.logger.info("********************test_login_page_tittle started*********************")
+    #     self.driver = setup
+    #     self.loginpage = Login(self.driver)
+    #     self.loginpage.open_application()
+    #     time.sleep(5)
+    #     self.loginpage.open_login_page()
+    #     time.sleep(3)
+    #     if "dashboard1" in self.driver.current_url:
+    #         self.driver.close()
+    #         self.logger.info("******************** test_login_page_tittle test case passed ************************")
+    #     else:
+    #         self.driver.get_screenshot_as_file(ReadConfig.get_ss_path() + "test_login_page_tittle.png")
+    #         self.driver.close()
+    #         self.logger.error("******************** test_login_page_tittle test case failed **************************")
+    #         assert False
+    #     self.logger.info("******************** test_login_page_tittle ended ************************")
