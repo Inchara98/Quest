@@ -38,7 +38,10 @@ jobs:
 #             python ./Test_cases/test.py
 
     - name: list files
-      run: ls
+      run: |
+            ls
+            cd Reports
+            ls
 
     - name: Send Email Report
       uses: actions/upload-artifact@v2
