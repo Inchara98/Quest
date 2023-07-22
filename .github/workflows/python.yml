@@ -50,7 +50,7 @@ jobs:
         GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}
         RECIPIENT_EMAIL: incharakgowda1998@gmail.com  # Replace with the recipient's email
       run: |
-        python send_email_script.py $GMAIL_USERNAME $GMAIL_PASSWORD $RECIPIENT_EMAIL
+        python ./Reports/send_email_script.py $GMAIL_USERNAME $GMAIL_PASSWORD $RECIPIENT_EMAIL
 
 #    - name: Send Email Notification
 #      uses: dawidd6/action-send-mail@v3
