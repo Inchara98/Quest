@@ -29,37 +29,37 @@ jobs:
 
     
 
-#    - name: execute py script # run main.py
-#      run: |
-#             pytest --html=./Reports/report.html ./Test_cases/Test_demo.py --browser chrome
-#             pytest ./Test_cases/Test_DD.py --browser chrome
     - name: execute py script # run main.py
       run: |
-             python ./Test_cases/test.py
+             pytest --html=./Reports/report.html ./Test_cases/Test_demo.py --browser chrome
+#             pytest ./Test_cases/Test_DD.py --browser chrome
+#    - name: execute py script # run main.py
+#      run: |
+#             python ./Test_cases/test.py
              
 
-#    - name: Send Email Report
-#      uses: actions/upload-artifact@v2
-#      with:
-#        name: Test Report
-#        path: report.html
-#
-#    - name: Configure Gmail and Send Email
-#      env:
-#        GMAIL_USERNAME: ${{ secrets.GMAIL_USERNAME }}
-#        GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}
-#        RECIPIENT_EMAIL: incharakgowda1998@gmail.com  # Replace with the recipient's email
-#      run: |
-#        python send_email_script.py $GMAIL_USERNAME $GMAIL_PASSWORD $RECIPIENT_EMAIL
-
-    - name: Send Email Notification
-      uses: dawidd6/action-send-mail@v3
+    - name: Send Email Report
+      uses: actions/upload-artifact@v2
       with:
-          server_address: "smtp.gmail.com"
-          server_port: "465"
-          username: "inchara.gowda@tibilsolutions.com"
-          password: "inchara98$"
-          subject: "GitHub Action - Email Notification"
-          body: "This is the email content."
-          from: "inchara.gowda@tibilsolutions.com"
-          to: "vinay.aj1997@gmail.com"
+        name: Test Report
+        path: ./Reports/report.html
+
+    - name: Configure Gmail and Send Email
+      env:
+        GMAIL_USERNAME: ${{ secrets.GMAIL_USERNAME }}
+        GMAIL_PASSWORD: ${{ secrets.GMAIL_PASSWORD }}
+        RECIPIENT_EMAIL: incharakgowda1998@gmail.com  # Replace with the recipient's email
+      run: |
+        python send_email_script.py $GMAIL_USERNAME $GMAIL_PASSWORD $RECIPIENT_EMAIL
+
+#    - name: Send Email Notification
+#      uses: dawidd6/action-send-mail@v3
+#      with:
+#          server_address: "smtp.gmail.com"
+#          server_port: "465"
+#          username: "inchara.gowda@tibilsolutions.com"
+#          password: "inchara98$"
+#          subject: "GitHub Action - Email Notification"
+#          body: "This is the email content."
+#          from: "inchara.gowda@tibilsolutions.com"
+#          to: "vinay.aj1997@gmail.com"
