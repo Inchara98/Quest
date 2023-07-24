@@ -33,15 +33,8 @@ jobs:
       run: |
              pytest --html=./Reports/report.html ./Test_cases/Test_demo.py --browser chrome
 #             pytest ./Test_cases/Test_DD.py --browser chrome
-#    - name: execute py script # run main.py
-#      run: |
-#             python ./Test_cases/test.py
 
-    - name: list files
-      run: |
-            ls
-            cd Reports
-            ls
+
 
     - name: Send Email Report
       uses: actions/upload-artifact@v2
@@ -57,15 +50,4 @@ jobs:
       run: |
         python Reports/send_email_script.py $GMAIL_USERNAME $GMAIL_PASSWORD $RECIPIENT_EMAIL
 
-#    - name: Send Email Notification
-#      uses: dawidd6/action-send-mail@v3
-#      with:
-#          server_address: "smtp.gmail.com"
-#          server_port: "465"
-#          username: "inchara.gowda@tibilsolutions.com"
-#          password: "inchara98$"
-#          subject: "GitHub Action - Email Notification"
-#          body: "This is the email content."
-#          from: "inchara.gowda@tibilsolutions.com"
-#          to: "vinay.aj1997@gmail.com"
-#          attachments: ./Reports/report.html
+
